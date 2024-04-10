@@ -62,7 +62,7 @@ shellSort(array) {
     return array
 }
 
-  displayData(array){ //แสดงผลข้อมูล
+  displayData(array){ 
     let str = ""
 
     for(let i = 0;i < array.length;i++){
@@ -81,43 +81,40 @@ function DisP() {
     }
     re.innerHTML = "ตัวเลข : " + mySort.displayData(data)+"<br>"
 }
-//spread operator ("...") จะทำให้คุณสร้างตัวแปรใหม่ที่มีค่าเหมือนกับอาร์เรย์เดิม โดยที่ไม่ได้ทำการอ้างอิงถึงอาร์เรย์เดิมโดยตรง 
-
-//.slice() เป็นเมธอดของอาร์เรย์ใน JavaScript ที่ใช้ในการสร้างสำเนาของอาร์เรย์หรือเลือกส่วนหนึ่งของอาร์เรย์เพื่อสร้างอาร์เรย์ใหม่ โดยไม่เปลี่ยนแปลงอาร์เรย์เดิมตัวเอง
 
 function displayStep(step, array) {
     let stepResult = "รอบที่ " + step + " : " + array.join(" ") + "<br>"
     re.innerHTML += stepResult
 }
-let sortedData = [] // สร้างตัวแปรเก็บข้อมูลที่เรียงลำดับ
+let sortedData = [] 
 
 function bubbleS() {
     console.time("BubbleSort :")
-    re.innerHTML += "<br>Before Sort (Bubble Sort): " + mySort.displayData(data) + "<br>" // แสดง Before Sort
-    sortedData = mySort.bubbleSort([...data]) // เรียกเมธอดการเรียงลำดับและเก็บผลลัพธ์ไว้ใน sortedData
-    re.innerHTML += "After Sort (Bubble Sort): " + mySort.displayData(sortedData) + "<br><br>" // แสดง After Sort
+    re.innerHTML += "<br>Before Sort (Bubble Sort): " + mySort.displayData(data) + "<br>" 
+    sortedData = mySort.bubbleSort([...data]) 
+    re.innerHTML += "After Sort (Bubble Sort): " + mySort.displayData(sortedData) + "<br><br>" 
     console.timeEnd("BubbleSort :")
 }
 
 function insertionS() {
     console.time("InsertionSort :")
-    re.innerHTML += "<br>Before Sort (Insertion Sort): " + mySort.displayData(data) + "<br>" // แสดง Before Sort
-    sortedData = mySort.insertionSort([...data]) // เรียกเมธอดการเรียงลำดับและเก็บผลลัพธ์ไว้ใน sortedData
-    re.innerHTML += "After Sort (Insertion Sort): " + mySort.displayData(sortedData) + "<br><br>" // แสดง After Sort
+    re.innerHTML += "<br>Before Sort (Insertion Sort): " + mySort.displayData(data) + "<br>" 
+    sortedData = mySort.insertionSort([...data]) 
+    re.innerHTML += "After Sort (Insertion Sort): " + mySort.displayData(sortedData) + "<br><br>" 
     console.timeEnd("InsertionSort :")
 }
 
 function shellS() {
     console.time("ShellSort :")
-    re.innerHTML += "<br>Before Sort (Shell Sort): " + mySort.displayData(data) + "<br>" // แสดง Before Sort
-    sortedData = mySort.shellSort([...data]) // เรียกเมธอดการเรียงลำดับและเก็บผลลัพธ์ไว้ใน sortedData
-    re.innerHTML += "After Sort (Shell Sort): " + mySort.displayData(sortedData) + "<br><br>" // แสดง After Sort
+    re.innerHTML += "<br>Before Sort (Shell Sort): " + mySort.displayData(data) + "<br>" 
+    sortedData = mySort.shellSort([...data]) 
+    re.innerHTML += "After Sort (Shell Sort): " + mySort.displayData(sortedData) + "<br><br>" 
     console.timeEnd("ShellSort :")
 }
 
 function resetData() {
     n.value = ""
     re.innerHTML = ""
-    sortedData = [] // รีเซ็ตข้อมูลที่เรียงลำดับ
+    sortedData = [] 
     console.clear()
 }
