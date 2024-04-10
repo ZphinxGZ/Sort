@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    background-color: rgb(228, 228, 202);
+    color: black;
+    text-align: center;
+    align-items: center;
+}
+div {
+    margin-bottom: 10px;
+    text-align: center;
+    align-items: center;
+}
+button {
+    border: rgb(174, 0, 255) 3px solid;
+    font-size: 16px;
+    font-weight: bold;
+    /*background-color: rgb(255, 0, 221);*/
+}
+
+input {
+    font-size: 15px;
+}
+#result{
+    font-size: 20px;
+}
+form #laa{
+    font-size: 20px;
+    color: cornflowerblue;
+    
+}
+h1{
+    color: blueviolet;
+}
+hr{
+    border: 3px red solid;
+}
+.hh1{
+    background-color: aquamarine;
+    border-radius: 10px;
+    border: red 1px solid;
+}
+#laa{
+    font-size: 30px;
+    color: aqua;
+}
+    </style>
+</head>
+
+<body>
+    <div class="hh1">
+        <h1>โปรแกรม Sort ข้อมูล</h1>
+    </div>
+    
+    <hr>
+    <form action="#">
+        <div>
+            <label for="" id="laa">จำนวนที่ Random ข้อมูล</label>
+            <input type="number" name="" id="randd">
+        </div>
+        <div>
+            <button onclick="DisP()" id="bu">แสดงผลข้อมูล</button>
+            <button onclick="bubbleS()" id="bu">Bubble & Time</button>
+            <button onclick="insertionS()" id="bu">Insertion & Time</button>
+            <button onclick="shellS()" id="bu">Shell & Time</button>
+            <button onclick="resetData()" id="bu">Reset</button>
+        </div>
+        
+    </form>
+    <hr>
+
+    <label for="" id="result"></label>
+    <script src="time.js"></script>
+</body>
+
+</html>
